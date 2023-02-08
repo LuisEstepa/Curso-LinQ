@@ -15,7 +15,7 @@ LinqQueries queries = new LinqQueries();
 
 //ImprimirValores(queries.LibrosEntre200And400pag());
 
-Console.WriteLine($"Libros entre 200 y 400 paginas es: {queries.LibrosEntre200And400pag()}");
+Console.WriteLine($"La cantidad de Libros entre 200 y 400 paginas es: {queries.LibrosEntre200And400pag()}");
 
 //Console.WriteLine($"Libro con la fecha de publicacion mas antigua es: {queries.LibrosMasAntigua()}");
 

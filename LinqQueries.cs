@@ -125,7 +125,7 @@ public class LinqQueries
     public int LibrosEntre200And400pag()
     {
         // query extension method
-        return librosCollection.Count(p => p.PageCount >= 200 && p.PageCount <= 400);//trae lia libros entre 200 y 400 paginas
+        return librosCollection.Count(p => p.PageCount >= 200 && p.PageCount <= 400);//trae lista libros entre 200 y 400 paginas
         
 
         // query expresion method
@@ -149,7 +149,7 @@ public class LinqQueries
     public DateTime LibrosMasAntigua()
     {
         // query extension method
-        return librosCollection.Min(p => p.PublishedDate);//trae el libro publicado mas reciente
+        return librosCollection.Min(p => p.PublishedDate);//trae la fecha del libro publicado mas reciente
         
 
         // query expresion method
@@ -157,11 +157,11 @@ public class LinqQueries
 
     }
     
-    /*Utilizando el operador Max *//////////////////////////////////////////////////////////////////////////////////////
+    /*Utilizando el operador Max *///////////////////////////////////////////////////////////////////////////////////////
     public DateTime LibrosMasReciente()
     {
         // query extension method
-        return librosCollection.Max(p => p.PublishedDate);//trae el libro publicado mas reciente
+        return librosCollection.Max(p => p.PublishedDate);//trae la fecha del libro publicado mas reciente
         
 
         // query expresion method
