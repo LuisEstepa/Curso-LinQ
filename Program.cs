@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 LinqQueries queries = new LinqQueries();
 
 //ImprimirValores(queries.TodaLaColeccion()); // mostrar toda la coleccion
@@ -15,11 +16,16 @@ LinqQueries queries = new LinqQueries();
 
 //ImprimirValores(queries.LibrosEntre200And400pag());
 
-Console.WriteLine($"La cantidad de Libros entre 200 y 400 paginas es: {queries.LibrosEntre200And400pag()}");
+//Console.WriteLine($"La cantidad de Libros entre 200 y 400 paginas es: {queries.LibrosEntre200And400pag()}");
 
 //Console.WriteLine($"Libro con la fecha de publicacion mas antigua es: {queries.LibrosMasAntigua()}");
 
 //Console.WriteLine($"Libro con la fecha de publicacion mas reciente es: {queries.LibrosMasReciente()}");
+
+// var libroMenorPag = queries.LibroConMenorNumeroDePaginas();
+// Console.WriteLine($"El titulo {libroMenorPag.Title} con {libroMenorPag.PageCount} pagigas");
+
+//Console.WriteLine(TitulosDeLibrosDespuesDe2015Concatenados());//
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {

@@ -168,4 +168,60 @@ public class LinqQueries
 
 
     }
+
+    /*Utilizando el operador MinBY *///////////////////////////////////////////////////////////////////////////////////////
+    public Book LibroConMenorNumeroDePaginas()
+    {
+        // query extension method
+        return librosCollection.Where(p => p.PageCount > 0).MinBy(p=> p.PageCount);//trae el libro con menor numero de paginas
+        
+
+        // query expresion method
+
+    }
+
+    /*Utilizando el operador MaxBY *///////////////////////////////////////////////////////////////////////////////////////
+    public Book LibroConMayorNumeroDePaginas()
+    {
+        // query extension method
+        return librosCollection.MaxBy(p=> p.PublishedDate);//trae el libro publicado mas reciente retorna todo el objeto
+        
+
+        // query expresion method
+
+    }
+
+    /*Utilizando el operador Sum */
+    public int SumaCantidadPaginasTodosLosLibros()
+    {
+        // query extension method
+        return librosCollection.Where(p=> p.PageCount > 0 && p.PageCount <= 500).Sum(p=> p.PageCount);//suma las paginas de todos los libros
+        
+
+        // query expresion method
+
+    }
+
+     /*Utilizando el operador Aggregate */
+    // public string TitulosDeLibrosDespuesDe2015Concatenados()
+    // {
+    //     // query extension method
+    //     return librosCollection
+    //             .Where(p=> p.PublishedDate.Year > 2015),
+    //             .Aggregate("", (TitulosLibros, next) =>
+    //             {
+    //                 if(TitulosLibros != string.Empty)
+    //                     TitulosLibros += " - " + next.Title;
+    //                 else
+    //                     TitulosLibros += next.Title;
+                    
+    //                 return TitulosLibros;
+    //             });
+        
+
+        // query expresion method
+
+    }
+
+
 }
