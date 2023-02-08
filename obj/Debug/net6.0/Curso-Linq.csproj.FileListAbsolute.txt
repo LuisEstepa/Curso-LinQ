@@ -1,0 +1,15 @@
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\bin\Debug\net6.0\Curso-Linq.exe
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\bin\Debug\net6.0\Curso-Linq.deps.json
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\bin\Debug\net6.0\Curso-Linq.runtimeconfig.json
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\bin\Debug\net6.0\Curso-Linq.dll
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\bin\Debug\net6.0\Curso-Linq.pdb
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.csproj.AssemblyReference.cache
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.GeneratedMSBuildEditorConfig.editorconfig
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.AssemblyInfoInputs.cache
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.AssemblyInfo.cs
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.csproj.CoreCompileInputs.cache
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.dll
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\refint\Curso-Linq.dll
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.pdb
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\Curso-Linq.genruntimeconfig.cache
+C:\DEVLUIS\Platzi\ProyectosCursos\Curso-Linq\obj\Debug\net6.0\ref\Curso-Linq.dll
