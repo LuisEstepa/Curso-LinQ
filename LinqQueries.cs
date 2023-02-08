@@ -69,7 +69,7 @@ public class LinqQueries
         public IEnumerable<Book> LibrosDeJavaPorNombreAscendente()
     {
         // query extension method
-        return librosCollection.Where(p=> p.Categories.Contains("Java")).OrderBy(p=> p.Title);// elemendos que contienen Java en orden Ascendiente
+        return librosCollection.Where(p=> p.Categories.Contains("Java")).OrderBy(p=> p.Title);// elementos que contienen Java en orden Ascendiente
 
         // query expresion method
 
@@ -79,7 +79,7 @@ public class LinqQueries
         public IEnumerable<Book> LibrosConMasDe450Paginas()
     {
         // query extension method
-        return librosCollection.Where(p=> p.PageCount > 450).OrderByDescending(p=> p.PageCount);// elemendos que contienen Java en orden Descendiente
+        return librosCollection.Where(p=> p.PageCount > 450).OrderByDescending(p=> p.PageCount);// elementos que contienen Java en orden Descendiente
 
         // query expresion method
 
@@ -89,7 +89,7 @@ public class LinqQueries
         public IEnumerable<Book> LibrosDeJavaTresMasNuevos()
     {
         // query extension method
-        return librosCollection.Where(p=> p.Categories.Contains("Java")).OrderByDescending(p=> p.PublishedDate).Take(3);// elemendos que contienen Java publicados mas recientemente
+        return librosCollection.Where(p=> p.Categories.Contains("Java")).OrderByDescending(p=> p.PublishedDate).Take(3);// tres elemendos que contienen Java publicados mas recientemente
 
         // query expresion method
 
@@ -113,8 +113,8 @@ public class LinqQueries
         public IEnumerable<Book> LibrosTresprimeros()
     {
         // query extension method
-        return librosCollection.Take(3)//trae la cantidad de registros que ñe indiquemos
-        .Select(p=> new Book(){Title = p.Title, PageCount = p.PageCount});// omite la cantidad de registros que le indiquenos
+        return librosCollection.Take(3)//trae la cantidad de registros que le indiquemos
+        .Select(p=> new Book(){Title = p.Title, PageCount = p.PageCount});// crea un nuevo arreglo con los campos que le indiquemos
 
         // query expresion method
 
@@ -125,7 +125,7 @@ public class LinqQueries
     public int LibrosEntre200And400pag()
     {
         // query extension method
-        return librosCollection.Count(p => p.PageCount >= 200 && p.PageCount <= 400);//trae lista libros entre 200 y 400 paginas
+        return librosCollection.Count(p => p.PageCount >= 200 && p.PageCount <= 400);//cuenta y devuelve cantidad de libros entre 200 y 400 paginas
         
 
         // query expresion method
@@ -137,7 +137,7 @@ public class LinqQueries
     public long LibrosEntre200And400pagLong()
     {
         // query extension method
-        return librosCollection.LongCount(p => p.PageCount >= 200 && p.PageCount <= 400);//trae lia libros entre 200 y 400 paginas
+        return librosCollection.LongCount(p => p.PageCount >= 200 && p.PageCount <= 400);//cuenta y devuelve cantidad de libros entre 200 y 400 paginas numeros mas grandes
         
 
         // query expresion method
@@ -149,7 +149,7 @@ public class LinqQueries
     public DateTime LibrosMasAntigua()
     {
         // query extension method
-        return librosCollection.Min(p => p.PublishedDate);//trae la fecha del libro publicado mas reciente
+        return librosCollection.Min(p => p.PublishedDate);//trae la fecha del libro publicacion mas antigua
         
 
         // query expresion method
