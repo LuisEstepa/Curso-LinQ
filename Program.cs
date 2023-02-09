@@ -25,7 +25,9 @@ LinqQueries queries = new LinqQueries();
 // var libroMenorPag = queries.LibroConMenorNumeroDePaginas();
 // Console.WriteLine($"El titulo {libroMenorPag.Title} con {libroMenorPag.PageCount} pagigas");
 
-//Console.WriteLine(TitulosDeLibrosDespuesDe2015Concatenados());//
+//Console.WriteLine(queries.TitulosDeLibrosDespuesDe2015Concatenados());//
+
+Console.WriteLine(queries.PromedioCaracteresTitulos());//
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {

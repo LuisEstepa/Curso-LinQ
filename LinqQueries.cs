@@ -202,26 +202,34 @@ public class LinqQueries
 
     }
 
-     /*Utilizando el operador Aggregate */
-    // public string TitulosDeLibrosDespuesDe2015Concatenados()
-    // {
-    //     // query extension method
-    //     return librosCollection
-    //             .Where(p=> p.PublishedDate.Year > 2015),
-    //             .Aggregate("", (TitulosLibros, next) =>
-    //             {
-    //                 if(TitulosLibros != string.Empty)
-    //                     TitulosLibros += " - " + next.Title;
-    //                 else
-    //                     TitulosLibros += next.Title;
-                    
-    //                 return TitulosLibros;
-    //             });
-        
-
+    /*Utilizando el operador Aggregate */
+    public string TitulosDeLibrosDespuesDe2015Concatenados()
+    {
+        // query extension method
+        return librosCollection
+                 .Where(p=> p.PublishedDate.Year > 2015)
+                 .Aggregate("", (TitulosLibros, next) => //concatena los titulos que cumplen con la condición
+                 {
+                    if(TitulosLibros != string.Empty){
+                        TitulosLibros += " - " + next.Title;
+                    }                         
+                    else{
+                        TitulosLibros += next.Title;
+                    }                    
+                    return TitulosLibros;
+                 });  
         // query expresion method
 
     }
+    
+    /*Utilizando el operador Average */
+    public double PromedioCaracteresTitulos()
+    {
+        // query extension method
+        return librosCollection.Average(p=> p.Title.Length);
+                 
+                 
+        // query expresion method
 
-
+    }
 }
