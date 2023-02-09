@@ -221,15 +221,28 @@ public class LinqQueries
         // query expresion method
 
     }
-    
+
     /*Utilizando el operador Average */
     public double PromedioCaracteresTitulos()
     {
         // query extension method
-        return librosCollection.Average(p=> p.Title.Length);
+        return librosCollection.Average(p=> p.Title.Length);// saca un promedo de valores númericos
                  
                  
         // query expresion method
 
     }
+
+    /*Utilizando el operador Average */
+    public IEnumerable<IGrouping<int, Book>> LibrosPublicadosDespuesDel2000()
+    {
+        // query extension method
+        return librosCollection.Where(p=> p.PublishedDate.Year >= 2000).GroupBy(p=> p.PublishedDate.Year);// agrupa de acuerdo al paramatro elegido
+                 
+                 
+        // query expresion method
+
+    }
+
+    
 }
