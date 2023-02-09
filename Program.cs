@@ -29,7 +29,23 @@ LinqQueries queries = new LinqQueries();
 
 //Console.WriteLine(queries.PromedioCaracteresTitulos());//
 
-ImprimirGrupo(queries.LibrosPublicadosDespuesDel2000());
+//ImprimirGrupo(queries.LibrosPublicadosDespuesDel2000());
+
+// var lookup = queries.BuscarLibrosPorLetraInicial();
+
+// ImprimirDiccionario(lookup,'C');
+
+ImprimirValores(queries.LibrosMs500PagPublicadosDespuesDel2005)
+
+
+void ImprimirDiccionario(ILookup<char, Book> ListadeLibros, char letra)
+{
+    Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+    foreach(var item in ListadeLibros[letra])
+    {
+            Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Title,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
+    }
+}
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {

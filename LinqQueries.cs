@@ -233,11 +233,35 @@ public class LinqQueries
 
     }
 
-    /*Utilizando el operador Average */
+    /*Utilizando el operador GroupBy */
     public IEnumerable<IGrouping<int, Book>> LibrosPublicadosDespuesDel2000()
     {
         // query extension method
         return librosCollection.Where(p=> p.PublishedDate.Year >= 2000).GroupBy(p=> p.PublishedDate.Year);// agrupa de acuerdo al paramatro elegido
+                 
+                 
+        // query expresion method
+
+    }
+
+    /*Utilizando el operador ToLookup */
+    public ILookup<char, Book> BuscarLibrosPorLetraInicial()
+    {
+        // query extension method
+        return librosCollection.ToLookup(p=> p.Title[0], p=> p );// busca coincidencias de acuerdo a parametros y posición
+                 
+                 
+        // query expresion method
+
+    }
+
+    /*Utilizando el operador Join */
+    public IEnumerable<Book> LibrosMs500PagPublicadosDespuesDel2005()
+    {
+        // query extension method
+        var librosMaa500Pag = librosCollection.Where(p=> p.PageCount >= 500);
+        var librosPublicasDespues2005 = librosCollection.Where(p=> p.PublishedDate.Year >= 2005);
+        return librosMaa500Pag.Join(librosPublicasDespues2005, p=> p.Title, x=> x.Title, (p,x)=> p);// union entre dos o mas colecciones por llave primaria
                  
                  
         // query expresion method
